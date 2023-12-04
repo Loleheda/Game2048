@@ -10,7 +10,7 @@ public class Key {
     }
 
     public int getI() {
-        return i;
+        return this.i;
     }
 
     public void setI(int i) {
@@ -18,7 +18,7 @@ public class Key {
     }
 
     public int getJ() {
-        return j;
+        return this.j;
     }
 
     public void setJ(int j) {

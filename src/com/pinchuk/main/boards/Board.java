@@ -2,18 +2,18 @@ package com.pinchuk.main.boards;
 
 import com.pinchuk.main.keys.Key;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 public abstract class Board {
-    private int weigh;
+    private int width;
     private int height;
-    private Map<Key, Integer> board;
+    protected Map<Key, Integer> board = new LinkedHashMap<>();
 
-    public Board(int weigh, int height) {
-        this.weigh = weigh;
+    public Board(int width, int height) {
+        this.width = width;
         this.height = height;
-        this.board = new HashMap<>();
     }
 
     public abstract void fillBoard(List<Integer> list);
@@ -34,5 +34,13 @@ public abstract class Board {
 
     public List<Integer> getValues(List<Key> keys) {
         return null;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
     }
 }
